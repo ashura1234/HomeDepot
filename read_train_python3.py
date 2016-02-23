@@ -14,10 +14,10 @@ def read_train(path):
         for row in train_file:
             if row_id > 1:
                 id.append(row[0])
-                product_uid.append(1)
-                product_title.append(2)
-                search_term.append(3)
-                relevance.append(4)
+                product_uid.append(row[1])
+                product_title.append(row[2])
+                search_term.append(row[3])
+                relevance.append(row[4])
             row_id += 1
         return id, product_uid, product_title, search_term, relevance
 
